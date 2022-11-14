@@ -3,6 +3,7 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Resume from "../assets/Resume.pdf";
 const About = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   return (
@@ -13,14 +14,14 @@ const About = ({ setSelectedPage }) => {
       <div className="flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
           >
             <img
               src="assets/about.png"
@@ -50,14 +51,19 @@ const About = ({ setSelectedPage }) => {
           <p className="text-5xl font-playfair z-10 text-center md:text-start">
             About Me:
           </p>
-          <p className="mt-10 mb-7 text-lg text-center md:text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            architecto ratione quod corrupti id nihil iusto nisi, modi
-            distinctio impedit eum nemo cum non minus, quasi voluptatem ut
-            obcaecati quaerat. Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit. Porro eum non eveniet consequuntur veritatis
-            repellat tenetur modi, saepe qui rerum dolorem sapiente iusto
-            suscipit sequi debitis cum praesentium vitae hic.
+          <p className="text-l font-playfair z-10 text-center md:text-start mt-5">
+            "BUT FIRST COFFEE ☕️"
+          </p>
+          <p className="mt-7 mb-7 text-lg text-center md:text-start">
+            Now after my coffee break, I will tell you about me. My name is
+            Ibtehal, Hal for short,and I live in Kuala-Lumpur, Malaysia. I am
+            very passionate about coding and the tech field. Besides coding I
+            also love to swim,exersise,eat and go ice skating. <br />I did my
+            Bachelor's degree in Information System, and from there I know I can
+            perform well. I've just finished a Software Engineering Immersive
+            course, and I am doing alot of self-taught courses I can say that I
+            have all the basics .Since this field keeps evolving, I am always
+            eager to learn more and know more.
           </p>
         </motion.div>
         <motion.dev
@@ -71,13 +77,14 @@ const About = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
+          <a
             className="bg-pink text-black py-3 px-7 font-semibold hover:bg-[#fed7aa] transition duration-500 rounded-lg"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            // onClick={() => setSelectedPage("contact")}
+            download=""
+            href={Resume}
           >
             Download CV{" "}
-          </AnchorLink>
+          </a>
         </motion.dev>
 
         <motion.dev

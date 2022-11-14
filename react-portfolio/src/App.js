@@ -4,6 +4,8 @@ import Landing from "./scenes/Landing";
 import About from "./scenes/About";
 import Skills from "./scenes/Skills";
 import Projects from "./scenes/Projects";
+import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer"
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import LineGradient from "./components/LineGradient";
@@ -39,7 +41,7 @@ function App() {
         <Landing setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         <About />
       </div>
       <LineGradient />
@@ -50,6 +52,11 @@ function App() {
       <div className="w-5/6 mx-auto">
         <Projects />
       </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <Contact />
+      </div>
+      <Footer/>
     </div>
   );
 }

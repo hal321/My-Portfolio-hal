@@ -1,6 +1,11 @@
 import React from "react";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import project1 from "../assets/TicTacToe.png";
+import project2 from "../assets/project02.png";
+import project3 from "../assets/project-3.png";
+import project4 from "../assets/project04.png";
+
 const container = {
   hidden: {},
   visible: {
@@ -15,17 +20,15 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, subTitle }) => {
+const Project = ({ title, subTitle, img }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-black`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
-
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair"> {title}</p>
         <p className="mt-7">{subTitle}</p>
       </div>
-      <img src={`../assets/${projectTitle}.png`} alt="project" />
+      <img src={img} alt="project" height={400} width={400} />
     </motion.div>
   );
 };
@@ -54,9 +57,8 @@ const Projects = () => {
         </div>
 
         <p className="mt-10 mb-10">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nulla
-          debitis possimus quae at harum nihil saepe omnis ullam. Assumenda
-          facere sunt numquam quibusdam at cupiditate fugit hic a nulla.
+          These are some of the projects I did lately, I've put all the links to
+          live view and the source code at my Github.
         </p>
       </motion.div>
 
@@ -71,10 +73,27 @@ const Projects = () => {
           <div className="flex justify-center text-center items-center p-10 bg-pink max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="profile" subTitle="Tic Tac Toe Game" />
-          <Project title="profile" subTitle="Skin Care Ecommerce Website" />
-          <Project title="profile" subTitle="Flower online shop" />
-          <Project title="profile" subTitle="Portfolio" />
+          <Project
+            title="project-1"
+            subTitle="Tic Tac Toe Game"
+            img={project1}
+          />
+          <Project
+            title="project-2"
+            subTitle="Skin Care Ecommerce Website"
+            img={project2}
+          />
+          <Project
+            title="project-3"
+            subTitle="Flowers & Plants online shop"
+            img={project3}
+          />
+          <Project
+            title="project-4"
+            subTitle="Portfolio Website"
+            img={project4}
+          />
+
           <div className="flex justify-center text-center items-center p-10 bg-pink max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             SMOOTH USER EXPERIENCE{" "}
           </div>

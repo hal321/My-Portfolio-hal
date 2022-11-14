@@ -37,7 +37,7 @@ const Skills = () => {
                 src="assets/projects.png"
                 alt="skills-img"
                 className="z-10  "
-                style={{ width: 200}}
+                style={{ width: 200 }}
               />
             </div>
           ) : (
@@ -46,7 +46,7 @@ const Skills = () => {
                 src="assets/projects.png"
                 alt="skills-img"
                 className="z-10"
-                style={{ width: 200}}
+                style={{ width: 200 }}
               />
             </div>
           )}
@@ -71,11 +71,17 @@ const Skills = () => {
                 Front-End
               </h1>
               <p className="font-playfair text-l">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                exercitationem error. Illo quae quisquam explicabo itaque,
-                expedita aperiam quibusdam impedit nihil eaque repellat
-                consequuntur perspiciatis quas quasi tempore. Error, corrupti?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ratione quas. Veniam animi totam dicta perferendis facere odit illum. Minima voluptates dolore eaque suscipit. Accusamus vel eos odit voluptates facilis.
+                It's the interface that attract users to the website or the app,
+                they know nothing about the back-end. So I belive that making
+                the app as user-friendly, and smooth-looking as possible is key
+                to a good platform. using good UI/UX will take the web app to
+                the optimal form.
+              </p>
+              <h1 className="font-playfair font-semibold text-xl mb-5 mt-5">
+                SKILLS:{" "}
+              </h1>
+              <p className="font-playfair text-l">
+                HTML, CSS, JS, React, jQuery, Bootsrap, Tailwind...
               </p>
             </div>
           </div>
@@ -97,11 +103,17 @@ const Skills = () => {
                 Back-End
               </h1>
               <p className="font-playfair text-l">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                exercitationem error. Illo quae quisquam explicabo itaque,
-                expedita aperiam quibusdam impedit nihil eaque repellat
-                consequuntur perspiciatis quas quasi tempore. Error, corrupti?.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam aliquam ea, doloribus reprehenderit eum autem harum quisquam aliquid eos error? Nam quibusdam ipsum tempore hic praesentium perspiciatis nulla dolores!
+                Back-End or server-side is really what matters to us developer,
+                so much magic happens there, with a good well-established
+                back-end your web app gonna survive longer and load faster, its
+                about what to use and when to use what is the best practice
+                according to time and space.
+              </p>
+              <h1 className="font-playfair font-semibold text-xl mb-5 mt-5">
+                SKILLS:{" "}
+              </h1>
+              <p className="font-playfair text-l">
+                JS, Postgres, Mongodb, Firebase, Node js, Express...
               </p>
             </div>
           </div>
