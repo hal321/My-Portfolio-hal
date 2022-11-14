@@ -6,8 +6,8 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""} 
-    hover:text-yellow transition duration-500`}
+      className={`${selectedPage === lowerCasePage ? "text-pink" : ""} 
+    hover:text-pink transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -18,7 +18,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
-  const navbarBackground=isTopOfPage?"": "bg-red"
+  const navbarBackground=isTopOfPage?"": "bg-lightBlack"
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
@@ -61,10 +61,10 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }) => {
         )}
 
         {!isAboveSmallScreens&&isMenuToggled&&(
-            <div className="fixed right-0 bottom-0 h-full w-[300px] bg-gray-800">
+            <div className="fixed right-0 bottom-0 h-full w-[300px] bg-lightBlack">
 <div className="flex justify-end p-12">
     <button onClick={()=>setIsMenuToggled(!isMenuToggled)}>
-    <img src="../assets/close-icon.svg" alt="close-icon" />
+    <img src="../assets/close-icon.svg" alt="close-icon" className="mt-5" />
     </button>
 </div>
 <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
