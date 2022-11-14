@@ -30,7 +30,7 @@ const About = ({ setSelectedPage }) => {
           </motion.div>
         ) : (
           <img
-            src="assets/profile.png"
+            src="assets/about.png"
             alt="profile-img"
             className="hover:shadow hover:shadow-rose-300 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] "
           />
