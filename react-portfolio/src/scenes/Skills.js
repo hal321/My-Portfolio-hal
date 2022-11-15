@@ -24,9 +24,7 @@ const Skills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-            dolorum quo debitis ullam nisi! Numquam a eligendi accusamus
-            mollitia labore.
+           I enjoy solving problems with clean scalable solutions.
           </p>
         </motion.div>
 
@@ -103,11 +101,11 @@ const Skills = () => {
                 Back-End
               </h1>
               <p className="font-playfair text-l">
-                Back-End or server-side is really what matters to us developer,
-                so much magic happens there, with a good well-established
-                back-end your web app gonna survive longer and load faster, its
-                about what to use and when to use what is the best practice
-                according to time and space.
+                Back-end or server-side is the behind-the-scenes for developers:
+                so much magic happens there. So with a good, well-established
+                back-end your web app will survive longer and load faster. When
+                used with front-end code, a functional, seamless experience is
+                delivered to the end-user.
               </p>
               <h1 className="font-playfair font-semibold text-xl mb-5 mt-5">
                 SKILLS:{" "}

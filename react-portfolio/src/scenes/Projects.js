@@ -1,4 +1,5 @@
 import React from "react";
+import { BsGithub } from "react-icons/bs";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import project1 from "../assets/TicTacToe.png";
@@ -57,8 +58,16 @@ const Projects = () => {
         </div>
 
         <p className="mt-10 mb-10">
-          These are some of the projects I did lately, I've put all the links to
-          live view and the source code at my Github.
+          These are some of the projects I did lately. I've put all the links
+          for live view and the source code on my Github.
+          <a
+            className="hover:opacity-50 transition duration:500 inline-flex"
+            href="https://github.com/hal321"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub size={20} />
+          </a>
         </p>
       </motion.div>
 

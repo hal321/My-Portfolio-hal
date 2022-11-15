@@ -43,8 +43,7 @@ const Landing = ({ setSelectedPage }) => {
             Hi, I'm Ibtehal
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            I am a full-stack developer who enjoy coding and like to write clean
-            efficient code
+            An experienced & innovative coder and developer.
           </p>
         </motion.div>
         <motion.dev
