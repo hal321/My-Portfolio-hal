@@ -21,13 +21,15 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, subTitle, img }) => {
+const Project = ({ title, subTitle, img, url }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-black`;
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair"> {title}</p>
-        <p className="mt-7">{subTitle}</p>
+        <a target="_blank" href={url}>
+          <p className="mt-7">{subTitle}</p>
+        </a>
       </div>
       <img src={img} alt="project" height={400} width={400} />
     </motion.div>
@@ -82,15 +84,19 @@ const Projects = () => {
           <div className="flex justify-center text-center items-center p-10 bg-pink max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             BEAUTIFUL USER INTERFACES
           </div>
+
           <Project
             title="project-1"
             subTitle="Tic Tac Toe Game"
             img={project1}
+            url={"https://pages.git.generalassemb.ly/hal/TicTacToe/"}
           />
+
           <Project
             title="project-2"
             subTitle="Skin Care Ecommerce Website"
             img={project2}
+            url={"https://rocky-crag-94743.herokuapp.com/"}
           />
           <Project
             title="project-3"
