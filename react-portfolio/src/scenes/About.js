@@ -55,16 +55,15 @@ const About = ({ setSelectedPage }) => {
             "BUT FIRST COFFEE ☕️"
           </p>
           <p className="mt-7 mb-7 text-lg text-center md:text-start">
-           With a cup of coffee, I can do anything. <br />
-           Here is a little bit about me: my name is
-            Ibtehal, Hal for short,and I live in Kuala-Lumpur, Malaysia. I am
-            very passionate about coding and the tech field. Besides coding I
-            also love to swim,exersise,eat and go ice skating. <br />I did my
-            Bachelor's degree in Information System, and from there I know I can
-            perform well. I've just finished a Software Engineering Immersive
-            bootcamp, and I am doing alot of self-taught courses I can say that
-            I have all the basics .Since this field keeps evolving, I am always
-            eager to learn more and know more.
+            With a cup of coffee, I can do anything. <br />
+            Here is a little bit about me: my name is Ibtehal, Hal for short,and
+            I live in Kuala-Lumpur, Malaysia. I am very passionate about coding
+            and the tech field. Besides coding I also love to swim,exersise,eat
+            and go ice skating. <br />I did my Bachelor's degree in Information
+            System, and from there I know I can perform well. I've just finished
+            a Software Engineering Immersive bootcamp, and I am doing alot of
+            self-taught courses I can say that I have all the basics .Since this
+            field keeps evolving, I am always eager to learn more and know more.
           </p>
         </motion.div>
         <motion.dev
@@ -80,11 +79,13 @@ const About = ({ setSelectedPage }) => {
         >
           <a
             className="bg-pink text-black py-3 px-7 font-semibold hover:bg-[#fed7aa] transition duration-500 rounded-lg"
-            // onClick={() => setSelectedPage("contact")}
-            download=""
-            href={Resume}
+            download
+            target="_blank"
+            href={
+              "https://drive.google.com/file/d/1nOhlastVJ8g2CcXxOjiq-YelXQGu-xqP/view"
+            }
           >
-            Download CV{" "}
+            Download CV
           </a>
         </motion.dev>
 

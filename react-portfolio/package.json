@@ -16,6 +16,7 @@
     "react-hook-form": "^7.39.3",
     "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
+    "vercel": "^28.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
