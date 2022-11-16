@@ -1,21 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LineGradient from "../components/LineGradient";
-import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = async (e) => {
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
-     
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send("service_zlqqfqh", "template_0bnt2ud", values, "CEsGljVMuxV_Z34V_")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response);
+          setValues({
+            name: "",
+            email: "",
+            message: "",
+          });
+          setStatus("SUCCESS");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+  useEffect(() => {
+    if (status === "SUCCESS") {
+      setTimeout(() => {
+        setStatus("");
+      }, 3000);
     }
-    e.target.reset();
+  }, [status]);
+
+  const handleChange = (e) => {
+    setValues((values) => ({
+      ...values,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
@@ -66,69 +92,41 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form
-            target="_blank"
-            onSubmit={onSubmit}
-            action="https://formsubmit.co/26a8ec203595082b0eeada44403e9864"
-            method="POST"
-          >
+          <form target="_blank" onSubmit={handleSubmit}>
             <input
               className="w-full bg-grey font-semibold placeholder-opaque-black p-3 text-black "
               type="text"
               placeholder="Name"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
+              value={values.name}
+              name="name"
+              id="name"
+              onChange={handleChange}
+              required
             />
-
-            {errors.name && (
-              <p className="text-red mt-1">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
 
             <input
               className="w-full bg-grey font-semibold placeholder-opaque-black p-3 mt-5 text-black"
               type="text"
               placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
+              name="email"
+              id="email"
+              value={values.email}
+             onChange={handleChange}
             />
 
-            {errors.emial && (
-              <p className="text-red mt-1">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
             <textarea
               className="w-full bg-grey font-semibold placeholder-opaque-black p-3 mt-5 text-black"
               type="text"
+              value={values.message}
               placeholder="MESSAGE"
               rows="4"
               cols="50"
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
+              name="message"
+              id="message"
+              onChange={handleChange}
             />
 
-            {errors.message && (
-              <p className="text-red mt-1">
-                {errors.message.type === "required" &&
-                  "This field is required."}
-                {errors.message.type === "maxLength" &&
-                  "Max length is 2000 char ."}
-              </p>
-            )}
-            <button
-              type="sumit"
-              className="bg-pink text-black p-5 font-semibold hover:bg-[#fed7aa] transition duration-500 rounded-lg"
-            >
+            <button className="bg-pink text-black p-5 font-semibold hover:bg-[#fed7aa] transition duration-500 rounded-lg">
               SEND ME A MESSAGE
             </button>
           </form>
