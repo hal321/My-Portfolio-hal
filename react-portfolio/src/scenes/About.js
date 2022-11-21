@@ -82,7 +82,7 @@ const About = ({ setSelectedPage }) => {
             download
             target="_blank"
             href={
-              "https://drive.google.com/file/d/1nOhlastVJ8g2CcXxOjiq-YelXQGu-xqP/view"
+              "https://drive.google.com/file/d/1LtS_zcs3xyMvR5ecutQRGZFhD41n5R0c/view"
             }
           >
             Download CV
