@@ -81,9 +81,7 @@ const About = ({ setSelectedPage }) => {
             className="bg-pink text-black py-3 px-7 font-semibold hover:bg-[#fed7aa] transition duration-500 rounded-lg"
             download
             target="_blank"
-            href={
-              "https://drive.google.com/file/d/1LtS_zcs3xyMvR5ecutQRGZFhD41n5R0c/view"
-            }
+            href={"#"}
           >
             Download CV
           </a>
